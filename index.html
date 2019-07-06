@@ -4,13 +4,14 @@
 		<meta charset="UTF-8" />
 		<title>My App</title>
 		<link rel="stylesheet" href="css/styles.css" />
-		<meta name="viewport" content="width-device-width,initial-scale=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
 	</head>
 	<body>
 		<header>
 			<div class="container">
 				<i id="open_menu" class="fas fa-bars"></i>
 				<nav id="menu">
+					<i id="close_menu" class="fas fa-times"></i>
 					<ul>
 						<li><a href="#">Menu</a></li>
 						<li><a href="#">Menu</a></li>
@@ -56,30 +57,32 @@
 		<section class="news">
 			<div class="container">
 				<h1 class="section-title">News</h1>
-				<article class="news-item">
-					<img src="img/news.png" />
-					<p>
-						hello. hello. hello. hello. hello. hello. hello. hello. hello.
-						hello. hello. hello. hello. hello. hello. hello. hello. hello.
-						hello. hello. hello. hello. hello. hello. hello. hello.
-					</p>
-				</article>
-				<article class="news-item">
-					<img src="img/news.png" />
-					<p>
-						hello. hello. hello. hello. hello. hello. hello. hello. hello.
-						hello. hello. hello. hello. hello. hello. hello. hello. hello.
-						hello. hello. hello. hello. hello. hello. hello. hello.
-					</p>
-				</article>
-				<article class="news-item">
-					<img src="img/news.png" />
-					<p>
-						hello. hello. hello. hello. hello. hello. hello. hello. hello.
-						hello. hello. hello. hello. hello. hello. hello. hello. hello.
-						hello. hello. hello. hello. hello. hello. hello. hello.
-					</p>
-				</article>
+				<div class="flex">
+					<article class="news-item">
+						<img src="img/news.png" />
+						<p>
+							hello. hello. hello. hello. hello. hello. hello. hello. hello.
+							hello. hello. hello. hello. hello. hello. hello. hello. hello.
+							hello. hello. hello. hello. hello. hello. hello. hello.
+						</p>
+					</article>
+					<article class="news-item">
+						<img src="img/news.png" />
+						<p>
+							hello. hello. hello. hello. hello. hello. hello. hello. hello.
+							hello. hello. hello. hello. hello. hello. hello. hello. hello.
+							hello. hello. hello. hello. hello. hello. hello. hello.
+						</p>
+					</article>
+					<article class="news-item">
+						<img src="img/news.png" />
+						<p>
+							hello. hello. hello. hello. hello. hello. hello. hello. hello.
+							hello. hello. hello. hello. hello. hello. hello. hello. hello.
+							hello. hello. hello. hello. hello. hello. hello. hello.
+						</p>
+					</article>
+				</div>
 			</div>
 		</section>
 
@@ -103,5 +106,22 @@
 			&copy; dotinstall.com
 		</footer>
 		<script src="https://kit.fontawesome.com/b3631e0f4a.js"></script>
+		<script>
+			(function() {
+				'use strict';
+
+				const openMenu = document.getElementById('open_menu');
+				const menu = document.getElementById('menu');
+				const closeMenu = document.getElementById('close_menu');
+
+				openMenu.addEventListener('click', () => {
+					menu.classList.add('shown');
+				});
+
+				closeMenu.addEventListener('click', () => {
+					menu.classList.remove('shown');
+				});
+			})();
+		</script>
 	</body>
 </html>
